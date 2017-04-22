@@ -147,7 +147,7 @@ function c3002.tg2(e,tp,eg,ev,ep,re,r,rp,chk)
 	if chk==0 then return c:GetCounter(0x1)~=0 and c:IsCanRemoveCounter(tp,0x1,1,REASON_EFFECT) end
 end
 function c3002.spfilter(c,e,tp,dam)
-	return c:IsType(TYPE_MONSTER) and c2001.IsLoli(c) and c:IsCanBeSpecialSummoned(e,SUMMON_TYPE_SPECIAL,tp,true,false) and c:GetAttack()<=dam
+	return c:IsType(TYPE_MONSTER) and c2001.lolicolection[c:GetCode()] and c:IsCanBeSpecialSummoned(e,SUMMON_TYPE_SPECIAL,tp,true,false) and c:GetAttack()<=dam
 end
 function c3002.op2(e,tp,eg,ev,ep,re,r,rp)
 	local c=e:GetHandler()
