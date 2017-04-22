@@ -85,7 +85,7 @@ function c3001.otop(e,tp,eg,ep,ev,re,r,rp,c)
 	Duel.Release(g,REASON_SUMMON+REASON_MATERIAL)
 end
 function c3001.repfilter(c,tp)
-	return c:IsFaceup() and c2001.lolicolection[c:GetCode()] and c:IsReason(REASON_BATTLE+REASON_EFFECT)
+	return c:IsFaceup() and c2001.IsLoli(c) and c:IsReason(REASON_BATTLE+REASON_EFFECT)
 end
 function c3001.reptg(e,tp,eg,ep,ev,re,r,rp,chk)
 	local c=e:GetHandler()
