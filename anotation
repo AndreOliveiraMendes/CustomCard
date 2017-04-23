@@ -1,0 +1,9 @@
+SAL:
+	SAL.NT={4,8,12}
+	SAL.T={2}
+	SAL.S={10}
+	SAL.SS={8}
+SRL:
+	SAL.SC="SPELL"
+	SAL.Y="TRAP"
+	SAL.W="MONSTER"
