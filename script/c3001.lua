@@ -136,7 +136,7 @@ function c3001.tg(e,tp,eg,ev,ep,re,r,rp,chk)
 		opt=Duel.SelectOption(tp,d3)+2
 	end
 	if opt==0 then
-		local tg=Duel.SelectMatchingCard(tp,c3001.filter1,tp,LOCATION_ONFIELD,LOCATION_ONFIELD,2,2,c)
+		local tg=Duel.SelectMatchingCard(tp,c3001.filter1,tp,LOCATION_ONFIELD,LOCATION_ONFIELD,1,1,nil)
 		Duel.SetTargetCard(tg)
 		ct=1
 	elseif opt==1 then
@@ -164,9 +164,8 @@ function c3001.op(e,tp,eg,ev,ep,re,r,rp)
 		local tg=Duel.GetChainInfo(0,CHAININFO_TARGET_CARDS)
 		local tc1=tg:GetFirst()
 		local tc2=tg:GetNext()
-		if not tc1 or not tc2 then return end
-		local code1=tc1:GetCode()
-		local code2=tc2:GetCode()
+		if not tc1 or tc1:IsFacedown() or not tc2 or tc2:IsFacedown() then return end
+		local code1,code2=tc1:GetCode(),tc2:GetCode()
 		local e1=Effect.CreateEffect(c)
 		e1:SetType(EFFECT_TYPE_SINGLE)
 		e1:SetCode(EFFECT_CHANGE_CODE)

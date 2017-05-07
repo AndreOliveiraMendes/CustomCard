@@ -113,7 +113,7 @@ function c3000.op(e,tp,eg,ev,ep,re,r,rp)
 	elseif opt==1 then
 		c:RemoveCounter(tp,0x1,2,REASON_COST)
 		local tg=Duel.GetFirstTarget()
-		if not tg then return end
+		if not tg or tc:IsFacedown() then return end
 		local e1=Effect.CreateEffect(c)
 		e1:SetType(EFFECT_TYPE_SINGLE)
 		e1:SetCode(EFFECT_CHANGE_CODE)
