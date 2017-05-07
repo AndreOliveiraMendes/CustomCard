@@ -136,7 +136,7 @@ function c3001.tg(e,tp,eg,ev,ep,re,r,rp,chk)
 		opt=Duel.SelectOption(tp,d3)+2
 	end
 	if opt==0 then
-		local tg=Duel.SelectMatchingCard(tp,c3001.filter1,tp,LOCATION_ONFIELD,LOCATION_ONFIELD,1,1,nil)
+		local tg=Duel.SelectMatchingCard(tp,c3001.filter1,tp,LOCATION_ONFIELD,LOCATION_ONFIELD,2,2,nil)
 		Duel.SetTargetCard(tg)
 		ct=1
 	elseif opt==1 then
